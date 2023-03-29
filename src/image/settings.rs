@@ -24,7 +24,7 @@
 /// assert_eq!(camera_settings, test_camera_settings);
 /// ```
 ///
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Clone)]
 pub struct CameraSettings {
     pub contrast: &'static str,
     pub sharpness: &'static str,
@@ -96,7 +96,7 @@ impl Default for CameraSettings {
 /// assert_eq!(image_settings, test_image_settings);
 /// ```
 ///
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Clone)]
 pub struct ImageSettings {
     pub width: &'static str,
     pub height: &'static str,

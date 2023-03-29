@@ -1,10 +1,10 @@
 [package]
 name = "raspicam"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["pawanbisht62 <pawanbisht62@gmail.com>"]
 license = "Apache-2.0"
 description = "Tiny Rust library for playing with RaspberryPi's camera."
 repository = "https://github.com/pawanbisht62/raspicam"
-edition = "2018"
+edition = "2021"
 
 [dependencies]
