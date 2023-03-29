@@ -73,6 +73,12 @@ impl Default for CameraSettings {
     }
 }
 
+impl CameraSettings {
+    pub fn set_output(&mut self, output: &'static str) {
+        self.output = output;
+    }
+}
+
 /// Settings for the image.
 ///
 /// # Example
