@@ -26,14 +26,14 @@
 ///
 #[derive(Debug, PartialEq, Clone)]
 pub struct CameraSettings {
-    pub contrast: &'static str,
-    pub sharpness: &'static str,
-    pub brightness: &'static str,
-    pub saturation: &'static str,
-    pub quality: &'static str,
-    pub timeout: &'static str,
-    pub iso: &'static str,
-    pub output: &'static str,
+    pub contrast: String,
+    pub sharpness: String,
+    pub brightness: String,
+    pub saturation: String,
+    pub quality: String,
+    pub timeout: String,
+    pub iso: String,
+    pub output: String,
 }
 
 impl Default for CameraSettings {
@@ -61,20 +61,20 @@ impl Default for CameraSettings {
     ///
     fn default() -> CameraSettings {
         CameraSettings {
-            contrast: "50",
-            sharpness: "30",
-            brightness: "60",
-            saturation: "0",
-            quality: "100",
-            timeout: "3000",
-            iso: "300",
-            output: "~/raspicam.jpg",
+            contrast: "50".to_string(),
+            sharpness: "30".to_string(),
+            brightness: "60".to_string(),
+            saturation: "0".to_string(),
+            quality: "100".to_string(),
+            timeout: "3000".to_string(),
+            iso: "300".to_string(),
+            output: "~/raspicam.jpg".to_string(),
         }
     }
 }
 
 impl CameraSettings {
-    pub fn set_output(&mut self, output: &'static str) {
+    pub fn set_output(&mut self, output: String) {
         self.output = output;
     }
 }
@@ -104,11 +104,11 @@ impl CameraSettings {
 ///
 #[derive(Debug, PartialEq, Clone)]
 pub struct ImageSettings {
-    pub width: &'static str,
-    pub height: &'static str,
-    pub rotation: &'static str,
-    pub horizontal_flip: &'static str,
-    pub vertical_flip: &'static str,
+    pub width: String,
+    pub height: String,
+    pub rotation: String,
+    pub horizontal_flip: String,
+    pub vertical_flip: String,
 }
 
 impl Default for ImageSettings {
@@ -133,11 +133,11 @@ impl Default for ImageSettings {
     ///
     fn default() -> ImageSettings {
         ImageSettings {
-            width: "200",
-            height: "200",
-            rotation: "180",
-            horizontal_flip: "false",
-            vertical_flip: "false",
+            width: "200".to_string(),
+            height: "200".to_string(),
+            rotation: "180".to_string(),
+            horizontal_flip: "false".to_string(),
+            vertical_flip: "false".to_string(),
         }
     }
 }
